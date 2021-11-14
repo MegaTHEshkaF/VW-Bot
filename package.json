@@ -1,7 +1,7 @@
 {
   "name": "vw-bot",
   "version": "1.0.0",
-  "description": "",
+  "description": "Helper for working with wiki",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"

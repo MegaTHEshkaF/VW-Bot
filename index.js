@@ -1,1 +1,2 @@
-require('./bot/bot');// 123
+require('./bot/bot');
+require('./dashboard/app');

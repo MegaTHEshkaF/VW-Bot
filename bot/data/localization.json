@@ -1,0 +1,202 @@
+{
+    "WIKIINFO_ERROR": {
+        "ru": "Вики не существует или указана неверно!",
+        "en": "The wiki does not exist or was specified incorrectly!"
+    },
+    "WIKIINFO_PAGES": {
+        "ru": "Страницы",
+        "en": "Pages"
+    },
+    "WIKIINFO_ARTICLES": {
+        "ru": "Статьи",
+        "en": "Articles"
+    },
+    "WIKIINFO_FILES": {
+        "ru": "Файлы",
+        "en": "Files"
+    },
+    "WIKIINFO_EDITS": {
+        "ru": "Правки",
+        "en": "Edits"
+    },
+    "WIKIINFO_ADMINS": {
+        "ru": "Администраторы",
+        "en": "Admins"
+    },
+    "WIKIINFO_ACTIVE_USERS": {
+        "ru": "Активные участники",
+        "en": "Active users"
+    },
+    "WIKIINFO_CREATION_DATE": {
+        "ru": "Дата создания",
+        "en": "Creation date"
+    },
+    "WIKIINFO_LANGUAGE": {
+        "ru": "Язык",
+        "en": "Language"
+    },
+    "USERINFO_ERROR": {
+        "ru": "Участник не найден или вики указана неправильно!",
+        "en": "User wasn't found or wiki wasn't specified correctly!"
+    },
+    "USERINFO_BIO": {
+        "ru": "О себе",
+        "en": "Bio"
+    },
+    "USERINFO_REGISTRATION": {
+        "ru": "Присоединился к вики",
+        "en": "Joined the wiki"
+    },
+    "USERINFO_NO_REGISTRATION": {
+        "ru": "Не присоединялся к вики",
+        "en": "Not joined the wiki"
+    },
+    "USERINFO_EDITS": {
+        "ru": "Глобальные правки",
+        "en": "Global edits"
+    },
+    "USERINFO_LOCAL_EDITS": {
+        "ru": "Локальные правки",
+        "en": "Loacal edits"
+    },
+    "USERINFO_POSTS": {
+        "ru": "Сообщения",
+        "en": "Posts"
+    },
+    "USERINFO_WEBSITE": {
+        "ru": "Веб-сайт",
+        "en": "Website"
+    },
+    "USERINFO_TAGS": {
+        "ru": "Теги",
+        "en": "Tags"
+    },
+    "VERIFICATION_ERROR1": {
+        "ru": "Эту команду можно использовать только в канале",
+        "en": "This command can be used only in the channel"
+    },
+    "VERIFICATION_ERROR2": {
+        "ru": "Участник не найден! Убедитесь, что вы указываете свой никнейм **на Вики**, а не в Discord",
+        "en": "User was not found! Make sure you specifying your nickname **on the wiki**, not on Discord"
+    },
+    "VERIFICATION_ERROR3": {
+        "ru": "Функция верификации отключена администратором",
+        "en": "Verification function is turned off by the administrator"
+    },
+    "VERIFICATION_TAGS": {
+        "ru": "Теги",
+        "en": "Tags"
+    },
+    "VERIFICATION_EDITS": {
+        "ru": "Правки",
+        "en": "Edits"
+    },
+    "VERIFICATION_LOCAL_EDITS": {
+        "ru": "правок",
+        "en": "edits"
+    },
+    "VERIFICATION_POSTS": {
+        "ru": "постов",
+        "en": "posts"
+    },
+    "VERIFICATION_ROLES": {
+        "ru": "Роли",
+        "en": "Roles"
+    },
+    "VERIFICATION_REGISTRATION": {
+        "ru": "Присоединился к вики",
+        "en": "Joined the wiki"
+    },
+    "VERIFICATION_NO_REGISTRATION": {
+        "ru": "Нет",
+        "en": "Didn't"
+    },
+    "VERIFICATION_REASON1": {
+        "ru": "В профиле отсутствует Discord-плашка!\n",
+        "en": "There is no Discord tag in profile!\n"
+    },
+    "VERIFICATION_REASON2": {
+        "ru": "Discord-плашка не совпадает с тегом!\n",
+        "en": "Profile Discord tag doesn't match yours\n"
+    },
+    "VERIFICATION_REASON3": {
+        "ru": "Сделано недостаточно правок на вики!\n",
+        "en": "Not enough edits on the wiki!\n"
+    },
+    "VERIFICATION_REASON4": {
+        "ru": "Сделано недостаточно правок и постов на вики!\n",
+        "en": "Not enough edits and posts on the wiki!\n"
+    },
+    "VERIFICATION_REASON5": {
+        "ru": "Отсутствует требуемая роль!\n",
+        "en": "Required role is missing!\n"
+    },
+    "VERIFICATION_REASON6": {
+        "ru": "Участник заблокирован на вики!\n",
+        "en": "User is blocked on wiki!\n"
+    },
+    "NEWMEMBER_DESCRIPTION": {
+        "ru": "Для верификации напишите:",
+        "en": "For verification write:"
+    },
+    "NEWMEMBER_EDITS": {
+        "ru": "Необходимо сделать",
+        "en": "You need to do"
+    },
+    "NEWMEMBER_EDITS_DESCRIPTION": {
+        "ru": "правок на вики",
+        "en": "edits on a wiki"
+    },
+    "NEWMEMBER_REQUIRED_ROLES": {
+        "ru": "Требуемые роли",
+        "en": "Required roles"
+    },
+    "NEWMEMBER_BUTTON_GUIDE": {
+        "ru": "Что это и зачем?",
+        "en": "What is this?"
+    },
+    "WIKILOG_USER": {
+        "ru": "Участник",
+        "en": "User"
+    },
+    "WIKILOG_DIFF": {
+        "ru": "разн.",
+        "en": "diff"
+    },
+    "WIKILOG_COMMENT": {
+        "ru": "Комментарий",
+        "en": "Comment"
+    },
+    "WIKILOG_NEW": {
+        "ru": "создал",
+        "en": "created"
+    },
+    "WIKILOG_DELETE": {
+        "ru": "удалил",
+        "en": "deleted"
+    },
+    "WIKILOG_OVERWRITE": {
+        "ru": "заменил",
+        "en": "changed"
+    },
+    "WIKILOG_BLOCK": {
+        "ru": "заблокировал",
+        "en": "blocked"
+    },
+    "WIKILOG_PROTECT": {
+        "ru": "сменил защиту",
+        "en": "changed protection"
+    },
+    "WIKILOG_RIGHTS": {
+        "ru": "изменил права",
+        "en": "changed rights"
+    },
+    "WIKILOG_LOAD": {
+        "ru": "загрузил",
+        "en": "loaded"
+    },
+    "WIKILOG_EDIT": {
+        "ru": "отредактировал",
+        "en": "edited"
+    }
+}

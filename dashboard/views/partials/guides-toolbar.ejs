@@ -1,0 +1,11 @@
+<nav class="guild-toolbar c-gray-2">
+    <ul class="menu">
+        <li class="guild">Обучение</li>
+        <li class="item"><a href="/guides/verification-guide"><i class="fa fa-check-square"></i>Верификация</a></li>
+    </ul>
+</nav>
+<script>
+    for (let item of document.querySelectorAll(".guild-toolbar .item a")) {
+        if(item.href == document.location.href) { item.classList.add('active'); };
+    }
+</script>

@@ -1,0 +1,179 @@
+[{
+    "name": "userinfo",
+    "description": {
+        "ru": "Информация об участнике на FANDOM'е",
+        "en": "Information about user on FANDOM"
+    },
+    "options": [
+        {
+            "name": "from",
+            "description": {
+                "ru": "Из",
+                "en": "From"
+            },
+            "type": "SUB_COMMAND_GROUP",
+            "options": [
+                {
+                    "name": "main-wiki",
+                    "description": {
+                        "ru": "Получить информацию об участнике с главной вики",
+                        "en": "Get information about user from the main wiki"
+                    },
+                    "type": "SUB_COMMAND",
+                    "options": [
+                        {
+                            "name": "username",
+                            "description": {
+                                "ru": "Укажите никнейм участника (на вики)",
+                                "en": "Specify user nickname (on wiki)"
+                            },
+                            "type": "STRING",
+                            "required": true
+                        }
+                    ]
+                },
+                {
+                    "name": "wiki-list",
+                    "description": {
+                        "ru": "Получить информацию об участнике с одной вики из списка",
+                        "en": "Get information about user from the wiki in the list"
+                    },
+                    "type": "SUB_COMMAND",
+                    "options": [
+                        {
+                            "name": "username",
+                            "description": {
+                                "ru": "Укажите никнейм участника (на вики)",
+                                "en": "Specify user nickname (on wiki)"
+                            },
+                            "type": "STRING",
+                            "required": true
+                        },
+                        {
+                            "name": "wiki",
+                            "description": {
+                                "ru": "Выберите вики",
+                                "en": "Choose a wiki"
+                            },
+                            "type": "STRING",
+                            "required": true,
+                            "choices_special": "wikies"
+                        }
+                    ]
+                },
+                {
+                    "name": "domain",
+                    "description": {
+                        "ru": "Получить информацию об участнике с вики определённого домена",
+                        "en": "Get information about user from a specific domain's wiki"
+                    },
+                    "type": "SUB_COMMAND",
+                    "options": [
+                        {
+                            "name": "username",
+                            "description": {
+                                "ru": "Укажите никнейм участника (на вики)",
+                                "en": "Specify user nickname (on wiki)"
+                            },
+                            "type": "STRING",
+                            "required": true
+                        },
+                        {
+                            "name": "domain",
+                            "description": {
+                                "ru": "Укажите домен вики",
+                                "en": "Specify wiki domain"
+                            },
+                            "type": "STRING",
+                            "required": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+},
+{
+    "name": "wikiinfo",
+    "description": {
+        "ru": "Информация об участнике на FANDOM'е",
+        "en": "Information about user on FANDOM"
+    },
+    "options": [
+        {
+            "name": "from",
+            "description": {
+                "ru": "Из",
+                "en": "From"
+            },
+            "type": "SUB_COMMAND_GROUP",
+            "options": [
+                {
+                    "name": "main-wiki",
+                    "description": {
+                        "ru": "Получить информацию об участнике с главной вики",
+                        "en": "Get information about the main wiki"
+                    },
+                    "type": "SUB_COMMAND"
+                },
+                {
+                    "name": "wiki-list",
+                    "description": {
+                        "ru": "Получить информацию о вики из списка",
+                        "en": "Get information about a wiki from the list"
+                    },
+                    "type": "SUB_COMMAND",
+                    "options": [
+                        {
+                            "name": "wiki",
+                            "description": {
+                                "ru": "Выберите вики",
+                                "en": "Choose a wiki"
+                            },
+                            "type": "STRING",
+                            "required": true,
+                            "choices_special": "wikies"
+                        }
+                    ]
+                },
+                {
+                    "name": "domain",
+                    "description": {
+                        "ru": "Получить информацию о вики определённого домена",
+                        "en": "Get information about a wiki from a specific domain'"
+                    },
+                    "type": "SUB_COMMAND",
+                    "options": [
+                        {
+                            "name": "domain",
+                            "description": {
+                                "ru": "Укажите домен вики",
+                                "en": "Specify wiki domain"
+                            },
+                            "type": "STRING",
+                            "required": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+},
+{
+    "name": "verification",
+    "description": {
+        "ru": "Проверяет, являетесь ли вы членом FANDOM'а",
+        "en": "Checks if you are a member of FANDOM"
+    },
+    "options": [
+        {
+            "name": "username",
+            "description": {
+                "ru": "Укажите ваш никнейм на вики",
+                "en": "Specify your nickname on wiki"
+            },
+            "type": "STRING",
+            "required": true
+        }
+    ]
+}]

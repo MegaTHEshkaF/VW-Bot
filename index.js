@@ -1,6 +1,7 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
 const chalk = require('chalk');
+const { debug_mode } = require('./config.json');
 
 // MongoDB
 mongoose.connect(process.env.MONGO_PATH, { useNewUrlParser: true, useUnifiedTopology: true, },
@@ -12,3 +13,6 @@ mongoose.connect(process.env.MONGO_PATH, { useNewUrlParser: true, useUnifiedTopo
 require('./bot/bot');
 // dashboard -> app.js
 require('./dashboard/app');
+
+// Debug notification
+if(debug_mode == true) console.log(chalk.yellow('Debug mode is active!'));

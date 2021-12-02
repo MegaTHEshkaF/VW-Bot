@@ -1,0 +1,15 @@
+<nav class="guild-toolbar c-gray-2">
+    <ul class="menu">
+        <li class="guild"><img src="https://cdn.discordapp.com/icons/<%=guild.id %>/<%=guild.icon %>.png" width="30px"><%=guild.name %></li>
+        <li class="item"><a href="/dashboard/<%=guild.id %>/general"><i class="fa fa-cogs"></i>Общее</a></li>
+        <li class="item"><a href="/dashboard/<%=guild.id %>/verification"><i class="fa fa-check-square"></i>Верификация</a></li>
+        <li class="item"><a href="/dashboard/<%=guild.id %>/wiki-logs"><i class="fa fa-line-chart"></i>Вики-логи</a></li>
+        <!-- <li class="item"><a href="/dashboard/<%=guild.id %>/commands"><i class="fa fa-terminal"></i>Команды</a></li> -->
+        <!-- <li class="item"><a href="/dashboard/<%=guild.id %>/union"><i class="fa fa-users"></i>Союз</a></li> -->
+    </ul>
+</nav>
+<script>
+    for (let item of document.querySelectorAll(".guild-toolbar .item a")) {
+        if(item.href == document.location.href) { item.classList.add('active'); };
+    }
+</script>

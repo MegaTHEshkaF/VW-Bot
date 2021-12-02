@@ -1,0 +1,20 @@
+<%- include('partials/header', { title: 'Список серверов' }) -%>
+
+<body>
+    <%- include('partials/main-toolbar') -%>
+
+    <section class="dashboard-servers flex-center c-gray-1">
+        <div class="menu">
+            <h2>Список серверов</h2>
+            <div class="guilds">
+                <% userDoc.guilds.sort(guild => { if(botGuilds.get(guild.id)) return -1; }).forEach(guild => { %>
+                    <% if((guild.permissions & 0x0000000008) == 0x0000000008 || (guild.permissions & 0x0000000020) == 0x0000000020) { %>
+                        <%- include('partials/guild', { guild }) -%>
+                    <% } %>
+                <% }) %>
+            </div>
+        </div>
+    </section>
+
+    <%- include('partials/footer') -%>
+</body>

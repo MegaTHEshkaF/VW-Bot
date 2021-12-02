@@ -1,0 +1,104 @@
+<%- include('partials/header', { title: guild.name }) -%>
+
+<body>
+    <%- include('partials/main-toolbar') -%>
+
+    <section class="dashboard-form c-gray-1">
+        <%- include('partials/guild-toolbar') -%>
+
+        <div class="content">
+            <h2>Верификация</h2>
+
+            <form method="post" id="1">
+                <div class="item c-gray-2">
+                    <label>Вкл./выкл.</label>
+                    <input class="switch" type="checkbox" name="using" id="using" value="<%=ver.using %>" <% if(ver.using) { %>checked<% } %>>
+                    <label class="switch" for="using"></label>
+                </div>
+
+                <div class="item c-gray-2">
+                    <h3>Канал верификации</h3>
+                    <p>В каком канале будет работать команда <b>/verification</b>. Если ничего не выбрано, команда будет работать в любом канале.</p>
+
+                    <label>Канал</label>
+                    <select name="channel_id">
+                        <% channels.forEach(channel => { %>
+                            <option <% if(ver.channel_id == channel.id) { %>selected<% } %> value="<%=channel.id %>"><%=`# ${channel.name}` %></option>
+                        <% }) %>
+                    </select>
+                </div>
+
+                <h3>Фильтры</h3>
+                <p>Требования к участнику для верификации.</p>
+
+                <div class="item c-gray-2">
+                    <h3>Требуемые правки</h3>
+                    <p>Как считать правки и сколько их требуется.</p>
+                    <label>Тип</label>
+                    <ul>
+                        <li><input type="radio" name="edit_type" value="0" <% if(ver.filters.edit_type == 0) { %>checked="true"<% } %>> Не учитывать</li>
+                        <li><input type="radio" name="edit_type" value="1" <% if(ver.filters.edit_type == 1) { %>checked="true"<% } %>> Только правки статей</li>
+                        <li><input type="radio" name="edit_type" value="2" <% if(ver.filters.edit_type == 2) { %>checked="true"<% } %>> Правки статей и посты</li>
+                    </ul>
+
+                    <label>Количество правок</label>
+                    <input type="number" name="edits" value="<%=ver.filters.edits %>" size="3" min="0" max="9999">
+                </div>
+                <div class="item c-gray-2">
+                    <h3>Требуемые роли</h3>
+                    <p>Как учитывать роли и какие требуются.</p>
+                    <label>Тип</label>
+                    <ul>
+                        <li><input type="radio" name="role_type" value="0" <% if(ver.filters.role_type == 0) { %>checked="true"<% } %>> Не учитывать</li>
+                        <li><input type="radio" name="role_type" value="1" <% if(ver.filters.role_type == 1) { %>checked="true"<% } %>> Только одну роль</li>
+                        <li><input type="radio" name="role_type" value="2" <% if(ver.filters.role_type == 2) { %>checked="true"<% } %>> Все роли</li>
+                    </ul>
+
+                    <label>Роли</label>
+                    <ul>
+                        <% roles.forEach(role => { %>
+                            <li><input type="checkbox" name="roles" value="<%=role.id %>" <% if(filterRoles.some(obj => obj.id == role.id)) { %>checked="true"<% } %>> <%=`@${role.name}` %></li>
+                        <% }) %>
+                    </ul>
+                </div>
+
+                <h3>Роли</h3>
+                <p>Учтите, что бот может давать и снимать роли только ниже своей высшей.</p>
+                <div class="item c-gray-2">
+                    <h3>Выдавать при заходе на сервер</h3>
+                    <label>Роли</label>
+                    <ul>
+                        <% botRoles.forEach(role => { %>
+                            <li><input type="checkbox" name="newMemberRoles" value="<%=role.id %>" <% if(newMemberRoles.some(obj => obj.id == role.id)) { %>checked="true"<% } %>> <%=`@${role.name}` %></li>
+                        <% }) %>
+                    </ul>
+                </div>
+                <div class="item c-gray-2">
+                    <h3>Выдавать после верификации</h3>
+                    <label>Роли</label>
+                    <ul>
+                        <% botRoles.forEach(role => { %>
+                            <li><input type="checkbox" name="addRoles" value="<%=role.id %>" <% if(addRoles.some(obj => obj.id == role.id)) { %>checked="true"<% } %>> <%=`@${role.name}` %></li>
+                        <% }) %>
+                    </ul>
+                </div>
+                <div class="item c-gray-2">
+                    <h3>Снимать после верификации</h3>
+                    <label>Роли</label>
+                    <ul>
+                        <% botRoles.forEach(role => { %>
+                            <li><input type="checkbox" name="removeRoles" value="<%=role.id %>" <% if(removeRoles.some(obj => obj.id == role.id)) { %>checked="true"<% } %>> <%=`@${role.name}` %></li>
+                        <% }) %>
+                    </ul>
+                </div>
+            </form>
+            <button class="big c-purple" type="submit" form="1">Сохранить</button>
+            <span class="successText hidden" id="successText">Настройки сохранены!</span>
+        </div>
+    </section>
+    
+    <%- include('partials/footer') -%>
+</body>
+<script src="/public/js/dashboardFunctions.js"></script>
+<% if(status == 'error') { %><script>showError()</script><% } %>
+<% if(status == 'success') { %><script>showSuccess()</script><% } %>

@@ -1,0 +1,43 @@
+<%- include('partials/header', { title: guild.name }) -%>
+
+<body>
+    <%- include('partials/main-toolbar') -%>
+
+    <section class="dashboard-form c-gray-1">
+        <%- include('partials/guild-toolbar') -%>
+
+        <div class="content">
+            <h2>Общее</h2>
+
+            <form method="post" id="1">
+                <div class="item c-gray-2">
+                    <label>Язык</label>
+                    <select name="language">
+                        <option <% if(guildDoc.language == 'en') { %>selected<% } %> value="en">English</option>
+                        <option <% if(guildDoc.language == 'ru') { %>selected<% } %> value="ru">Русский</option>
+                    </select>
+                </div>
+
+                <div class="item c-gray-2">
+                    <h3>Главная вики</h3>
+                    <p>Укажите домен главной вики сервера. По умолчанию используется <b>community.fandom.com</b>.</p>
+                    
+                    <label>Домен</label>
+                    <input type="text" name="domain" id="domain" value="<%=domain %>" size="50" maxlength="50">
+                    <!-- <button class="mini c-gray-1" type="button" onclick="wikiCheck()">Проверить</button> -->
+                    <span class="errorText hidden" id="errorText">Вики не найдена!</span>
+                </div>
+
+                <!-- <h3>Дополнительные вики</h3>
+                <p>Вы можете указать дополнительные вики для команд <b>/wikiinfo</b> и <b>/userinfo</b>.</p> -->
+            </form>
+            <button class="big c-purple" type="submit" form="1">Сохранить</button>
+            <span class="successText hidden" id="successText">Настройки сохранены!</span>
+        </div>
+    </section>
+    
+    <%- include('partials/footer') -%>
+</body>
+<script src="/public/js/dashboardFunctions.js"></script>
+<% if(status == 'error') { %><script>showError()</script><% } %>
+<% if(status == 'success') { %><script>showSuccess()</script><% } %>

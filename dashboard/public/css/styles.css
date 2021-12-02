@@ -1,0 +1,534 @@
+/* HTML elements */
+* {
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0px;
+    font-family: Roboto,sans-serif;
+}
+header {
+    margin-top: 0px;
+}
+section {
+    min-height: 20vh;
+}
+section.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+a {
+    text-decoration: none;
+    transition: .3s cubic-bezier(.25,.8,.5,1),color 1ms;
+    color: white;
+}
+a:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+h1 {
+    font-size: 45px;
+    letter-spacing: normal;
+    line-height: 55px;
+}
+h2 {
+    font-size: 35px;
+    margin: 10px 0;
+}
+h3 {
+    font-size: 23px;
+    margin: 8px 0;
+}
+h4 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+.spacer {
+    -ms-flex-positive: 1!important;
+    flex-grow: 1!important;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Buttons */
+button {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    border-style: none;
+    cursor: pointer;
+    transition: .3s cubic-bezier(.25,.8,.5,1),color 1ms;
+    background: #e2e2e2;
+}
+button:active {
+    background: #a0a0a0;
+}
+button.big {
+    margin-top: 15px;
+    margin-right: 5px;
+    padding: 0 32px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    height: 50px;
+    min-width: 88px;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+    text-transform: uppercase;
+}
+button.big svg {
+    margin-right: 7px;
+}
+button.mini {
+    padding: 5px 10px;
+    color: white;
+    border-radius: 3px;
+}
+button:hover {
+    background: #d8d8d8;
+    border-color: #d8d8d8;
+}
+button:active {
+    background: #9b9b9b;
+    border-color: #9b9b9b;
+}
+button.c-purple:hover {
+    background: #9952d6;
+    border-color: #9952d6;
+}
+button.c-purple:active {
+    background: #642a97;
+    border-color: #642a97;
+}
+button.c-gray-1:hover {
+    background-color: #474747;
+    border-color: #474747;
+}
+button.c-gray-1:active {
+    background-color: #2c2c2c;
+    border-color: #2c2c2c;
+}
+
+/* Colors */
+.c-purple {
+    background-color: #7e40b3;
+    border-color: #7e40b3;
+    color: white;
+}
+.c-gray-1 {
+    background-color: #333333;
+    border-color: #333333;
+}
+.c-gray-2 {
+    background-color: #282828;
+    border-color: #282828;
+}
+.c-gray-3 {
+    background-color: #1f1f1f;
+    border-color: #1f1f1f;
+}
+
+/* Checkbox switch */
+input.switch[type="checkbox"] {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+label.switch {
+    display: block;
+    width: 60px;
+    height: 30px;
+    background-color: #545454;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-left: auto;
+}
+label.switch::after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-color: #e8f5f7;
+    position: absolute;
+    border-radius: 24px;
+    top: 3px;
+    left: 4px;
+    transition: 0.5s;
+}
+input.switch:checked + label.switch:after {
+    left: calc(100% - 4px);
+    transform: translateX(-100%);
+}
+input.switch:checked + label.switch {
+    background-color: #7e40b3;
+}
+
+/* Main page */
+section.description {
+    min-height: 40vh;
+    background-image: url('../images/dashboard-theme-purple.jpg') !important;
+    color: white;
+}
+section.description img {
+    margin-right: 30px;
+}
+section.functions {
+    min-height: 35vh;
+    color: white;
+}
+section.functions .item {
+    max-width: 280px;
+    padding: 20px;
+    text-align: center;
+}
+section.functions .item > img {
+    margin-bottom: 4px;
+}
+/* Main page servers */
+section.servers {
+    min-height: 30vh;
+    color: white;
+}
+section.servers .window {
+    width: 400px;
+    min-height: 100px;
+    margin-top: 5px;
+    padding: 20px;
+    background: #2f3136;
+    border-radius: 10px;
+    background-image: url(https://discord.com/assets/319c6196da7ea2876ecf145b988e73a7.png),url(https://discord.com/assets/8c7c66b44b1087f6ca9edc6cc1245bec.png);
+    background-position: 0 100%,100% 100%;
+    background-repeat: no-repeat,no-repeat;
+    background-size: 200px 180px,110px 130px;
+    box-shadow: 0 1px 5px rgba(0 ,0 ,0 ,0.5);
+    display: flex;
+}
+section.servers .window .item {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+/* Dashboard servers */
+section.dashboard-servers {
+    min-height: 100vh;
+    color: #8b8b8b;
+}
+section.dashboard-servers h2 {
+    color: white;
+}
+section.dashboard-servers .menu {
+    margin: auto;
+    margin-top: 20px;
+    width: 50%;
+}
+section.dashboard-servers .guilds {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+section.dashboard-servers .guilds .item {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    min-height: 70px;
+    padding: 0 10px;
+    margin: 5px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+section.dashboard-servers .guilds .item.locked {
+    transition: opacity 0.3s;
+    opacity: 0.4;
+}
+section.dashboard-servers .guilds .item.locked:hover {
+    opacity: 1;
+}
+section.dashboard-servers .guilds .item img, section.dashboard-servers .guilds .item svg {
+    min-width: 50px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+section.dashboard-servers .guilds .item .name {
+    margin-right: 5px;
+}
+section.dashboard-servers .guilds .item a {
+    margin-left: auto;
+}
+section.dashboard-form {
+    min-height: 95vh;
+    display: flex;
+}
+section.dashboard-form .content {
+    width: calc(100% - 380px);
+    padding: 40px;
+    color: #8b8b8b;
+}
+section.dashboard-form .content a {
+    color: #9952d6;
+}
+section.dashboard-form .content h2, section.dashboard-form .content h3, section.dashboard-form .content h4 {
+    width: 100%;
+    color: white;
+}
+section.dashboard-form .content img {
+    margin: 20px;
+}
+section.dashboard-form .content.guides h3 {
+    margin-top: 40px;
+}
+section.dashboard-form .content .item {
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+section.dashboard-form .content .item p {
+    width: 100%;
+    margin: 20px 0;
+}
+section.dashboard-form label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+section.dashboard-form input[type='text'], section.dashboard-form input[type='number'], section.dashboard-form select {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    border: none;
+    background: #181818;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 10px;
+}
+section.dashboard-form ul {
+    list-style-type: none;
+    width: 100%;
+}
+section.dashboard-form ul li {
+    margin: 10px;
+}
+section.dashboard-form input:focus, .dashboard-form select:focus {
+    outline: none;
+}
+section.dashboard-form input.error {
+    color: #ed4245;
+    background: rgba(237, 66, 69, 0.2);
+}
+section.dashboard-form .errorText {
+    font-size: 14px;
+    margin-left: 10px;
+    color: #ed4245;
+}
+section.dashboard-form .successText {
+    font-size: 14px;
+    margin-left: 10px;
+    color: white;
+}
+section.dashboard-form .errorText.hidden, section.dashboard-form .successText.hidden {
+    display: none;
+}
+
+/* Guild toolbar */
+.guild-toolbar {
+    width: 300px;
+}
+.guild-toolbar .menu {   
+    list-style-type: none;
+    position: fixed;
+    width: inherit;
+}
+.guild-toolbar .guild {
+    color: white;
+    min-height: 75px;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+.guild-toolbar .guild img {
+    margin-right: 10px;
+}
+.guild-toolbar .item a {
+    margin: 5px 20px;
+    padding: 0 20px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    color: #8e9297;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+.guild-toolbar .item i {
+    margin-right: 5px;
+}
+.guild-toolbar .item a:hover {
+    color: white;
+}
+.guild-toolbar .item .active {
+    background: #3e3e3e;
+    color: white;
+}
+
+/* Tooltips */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+.tooltip .text {
+    visibility: hidden;
+    max-width: 200px;
+    min-width: 100px;
+    background-color: #202225;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 14px;
+}
+.tooltip:hover .text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Main toolbar */
+.main-toolbar {
+    padding: 0 25px;
+}
+.main-toolbar .menu, .main-toolbar .submenu {   
+    list-style-type: none;
+}
+.main-toolbar > ul li a {
+    cursor: pointer;
+    height: 64px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    transition: .3s cubic-bezier(.25,.8,.5,1),color 1ms;
+}
+.main-toolbar .item.has-submenu a {
+    text-transform: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+.main-toolbar .logo a {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: none;
+    color: white;
+}
+.main-toolbar .item a {
+    font-size: 19px;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 3px;
+}
+.main-toolbar .item a:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+.main-toolbar .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+/* Выпадающие списки */
+.main-toolbar .submenu {
+    display: none;
+    padding: 5px;
+    position: absolute;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 1px 5px rgba(0 ,0 ,0 ,0.5);
+    animation: show-up 0.4s ease;
+}
+.main-toolbar .submenu-active .submenu {
+   display: block;
+   z-index: 1;
+}
+.main-toolbar .subitem:first-child {
+    margin-bottom: 7px;
+}
+.main-toolbar .subitem a {
+    height: 35px;
+    padding: 0 10px;
+    color: black;
+    border-radius: 5px;
+}
+.main-toolbar .subitem a:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+.main-toolbar .subitem a#logout {
+    color: #bf464e;
+}
+/* Изображения и иконки */
+.main-toolbar img, .main-toolbar svg, .main-toolbar i:not(i.fa-sort-down) {
+    margin-right: 5px;
+}
+.main-toolbar img#profile {
+    border-radius: 30px;
+}
+.main-toolbar i.fa-language {
+    font-size: 25px;
+}
+.main-toolbar i.fa-sort-down {
+    font-size: 18px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+/* Анимации */
+@keyframes show-up {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Footer */
+footer.main {
+    height: 200px;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+footer.main .item {
+    margin-right: 40px;
+    color: white;
+    font-size: 18px;
+}
+footer.main .item#main-page {
+    font-weight: bold;
+    font-size: 32px;
+}
+footer.main .item ul {
+    list-style-type: none;
+}

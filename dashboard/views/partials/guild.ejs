@@ -10,6 +10,6 @@
     <% if(botGuilds.get(guild.id)) { %>
         <a href="/dashboard/<%=guild.id %>/general"><button class="mini c-purple">Редактировать</button></a>
     <% } else { %>
-        <a href="https://discord.com/api/oauth2/authorize?client_id=<%=clientId %>&permissions=8&redirect_uri=<%=redirectUri %>&scope=bot" target="_blank"><button class="mini c-gray-1">Пригласить</button></a>
+        <a href="https://discord.com/api/oauth2/authorize?client_id=<%=clientId %>&permissions=8&redirect_uri=<%=redirectUri %>&scope=applications.commands%20bot" target="_blank"><button class="mini c-gray-1">Пригласить</button></a>
     <% } %>
 </div>

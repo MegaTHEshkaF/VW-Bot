@@ -10,6 +10,6 @@
     <% if(botGuilds.get(guild.id)) { %>
         <a href="/dashboard/<%=guild.id %>/general"><button class="mini c-purple">Редактировать</button></a>
     <% } else { %>
-        <a href="https://discord.com/api/oauth2/authorize?client_id=668072271432253440&guild_id=<%=guild.id %>&permissions=8&redirect_uri=https%3A%2F%2Fdashboard.heroku.com%2Fauth%2Fredirect&scope=bot" target="_blank"><button class="mini c-gray-1">Пригласить</button></a>
+        <a href="https://discord.com/api/oauth2/authorize?client_id=<%=clientId %>&permissions=8&redirect_uri=<%=redirectUri %>&scope=bot" target="_blank"><button class="mini c-gray-1">Пригласить</button></a>
     <% } %>
 </div>

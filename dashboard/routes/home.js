@@ -9,6 +9,8 @@ router.get('/', isLogged, (req, res) => {
         isLoggedIn: req.isLogged,
         userDoc: req.user,
         botGuilds,
+        clientId: process.env.DASHBOARD_CLIENT_ID,
+        redirectUri: process.env.DASHBOARD_CALLBACK_URL,
     });
 });
 

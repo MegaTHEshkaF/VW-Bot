@@ -6,10 +6,11 @@ router.get('/', (req, res) => {
 });
 
 router.get('/verification-guide', isLogged, (req, res) => {
+    const guild = req.user ? req.user.guilds.find(guild => guild.id === req.params.id) : null;
     res.render('verification-guide', {
         isLoggedIn: req.isLogged,
         userDoc: req.user,
-        guild: req.user.guilds.find(guild => guild.id === req.params.id),
+        guild,
     });
 });
 

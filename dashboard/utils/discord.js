@@ -3,11 +3,9 @@ const DiscordStrategy = require('passport-discord').Strategy;
 const User = require('../../schemas/User');
 
 passport.serializeUser((user, done) => {
-    console.log(1);
     done(null, user.discord_id)
 });
 passport.deserializeUser(async (discord_id, done) => {
-    console.log(2);
     try {
         const user = await User.findOne({ discord_id });
         return user ? done(null, user) : done(null, null);
@@ -24,7 +22,6 @@ passport.use(
         callbackURL: process.env.DASHBOARD_CALLBACK_URL,
         scope: ['identify', 'guilds'],
     }, async (accessToken, refreshToken, profile, done) => {
-        console.log(3);
         try {
             const { id, username, discriminator, avatar, guilds } = profile;
             console.log(profile);

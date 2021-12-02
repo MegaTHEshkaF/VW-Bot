@@ -3,8 +3,7 @@ const passport = require('passport');
 
 router.get('/', passport.authenticate('discord'));
 
-router.get('/redirect', (req, res) => {
-    console.log(4);
+router.get('/redirect', passport.authenticate('discord'), (req, res) => {
     res.redirect(301, '/dashboard');
 });
 

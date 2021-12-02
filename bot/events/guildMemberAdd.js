@@ -34,7 +34,7 @@ module.exports = async (client, member) => {
     .addComponents(
         new Discord.MessageButton()
         .setLabel(localize('NEWMEMBER_BUTTON_GUIDE'))
-        .setURL('https://discordjs.guide/interactions/buttons.html#building-and-sending-buttons')
+        .setURL('https://verification-wiki-bot.herokuapp.com/guides/verification-guide')
         .setStyle('LINK'),
     );
 

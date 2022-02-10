@@ -136,7 +136,7 @@
         "en": "User is blocked on wiki!\n"
     },
     "NEWMEMBER_DESCRIPTION": {
-        "ru": "Для верификации напишите:",
+        "ru": "Если вы не умеете верифицироваться, нажмите кнопку «Инструкция»",
         "en": "For verification write:"
     },
     "NEWMEMBER_EDITS": {
